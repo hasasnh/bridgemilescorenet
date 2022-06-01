@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Menu\Bridgemiles.Core.Net.Menu.csproj" />
     <ProjectReference Include="src\OrchardCore.Themes\Metronic\Metronic.csproj" />
   </ItemGroup>
 
