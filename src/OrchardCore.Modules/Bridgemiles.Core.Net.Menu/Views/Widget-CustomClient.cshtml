@@ -1,9 +1,15 @@
-﻿
+﻿@using Bridgemiles.Core.Net.Menu.Models
+@using Newtonsoft.Json
+
 @{
 
 
-    foreach (var WidgetCustomClient in Model.Items)
-    {
-        var x = WidgetCustomClient;
-    }
+            //foreach (var WidgetCustomClient in Model.Items)
+    //{
+    //var x = WidgetCustomClient;
+    <div id="WidgetCustomClient">@Model.ContentItem.Content.ToString()</div>
+
+    JsonConvert.DeserializeObject<MainRoot>(Model.ContentItem.Content.ToString());
+
+    //}
 }

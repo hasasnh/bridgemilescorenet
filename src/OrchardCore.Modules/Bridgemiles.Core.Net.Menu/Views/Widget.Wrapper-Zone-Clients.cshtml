@@ -1,0 +1,12 @@
+﻿@inject OrchardCore.IOrchardHelper Orchard
+@{
+
+    @await DisplayAsync(Model.Content)
+    
+    //var items = Orchard.QueryListItemsAsync(Model.ContentItemId);
+
+    foreach (var item in Model.Items)
+    {
+        var x = item;
+    }
+}

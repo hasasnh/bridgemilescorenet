@@ -1,9 +1,31 @@
-﻿
+﻿@using Bridgemiles.Core.Net.Menu.Models
+@using Newtonsoft.Json
+@using OrchardCore.ContentManagement.Display
+@using OrchardCore.DisplayManagement
 @{
 
+    //    foreach (var contentItem in Model.ContentItems)
+    //{
+    //    Task<IShape> contentItemSummary = await ContentItemDisplayManager.BuildDisplayAsync(contentItem, Model.Context.Updater, "Summary", Model.Context.GroupId);
 
-    foreach (var ClientPartCustom in Model.Items)
-    {
-        var x = ClientPartCustom;
-    }
+    //    <li class="list-group-item">
+    //        @await DisplayAsync(contentItemSummary)
+    //    </li>
+    //}
+
+
+    //foreach (var ClientPartCustom in Model.ContentItems)
+    //{
+    //    var myDeserializedClass = ClientPartCustom as object;
+    //    <!--begin::Clients-->
+    //    <div class="d-flex flex-center flex-wrap position-relative px-5">
+    //        <!--begin::Client-->
+    //    <div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Fujifilm">
+    //            <img src="assets/media/svg/brand-logos/fujifilm.svg" class="mh-30px mh-lg-40px" alt="" />
+    //        </div>
+    //        <!--end::Client-->
+    //</div>
+    //    <!--end::Clients-->
+    //}
 }
+
