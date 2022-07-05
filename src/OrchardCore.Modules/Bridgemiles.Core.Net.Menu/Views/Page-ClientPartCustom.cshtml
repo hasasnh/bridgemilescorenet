@@ -3,6 +3,28 @@
 @using OrchardCore.ContentManagement.Display
 @using OrchardCore.DisplayManagement
 @{
+        foreach (var ClientCustom in Model.Items)
+    {
+        var x = ClientCustom;
+    }
+
+    <!--begin::Clients-->
+<div class="d-flex flex-center flex-wrap position-relative px-5">
+    @{
+        foreach (var ClientPartCustom in Model.ContentItems)
+        {
+            CustomClientWithListPart customClientWithListPart = JsonConvert.DeserializeObject<CustomClientWithListPart>
+            (ClientPartCustom.Content.ToString());
+
+            <!--begin::Client-->
+            <div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="@customClientWithListPart.TitlePart.Title">
+                <img src="https://localhost:5001/media/@customClientWithListPart.CustomClient.logo.Paths[0]" class="mh-30px mh-lg-40px" alt="" />
+            </div>
+            <!--end::Client-->
+        }
+    }
+</div>
+<!--end::Clients-->
 
     //    foreach (var contentItem in Model.ContentItems)
     //{

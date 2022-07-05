@@ -1,9 +1,12 @@
 ﻿@inject OrchardCore.IOrchardHelper Orchard
 @{
 
-    @await DisplayAsync(Model.Content)
+    //@await DisplayAsync(Model.Content)
     
-    //var items = Orchard.QueryListItemsAsync(Model.ContentItemId);
+    var items = @Orchard.QueryListItemsAsync((string)Model.Content.ContentItem.ContentItemId);
+    var itemCounts = @Orchard.QueryListItemsCountAsync((string)Model.Content.ContentItem.ContentItemId);
+
+      var itemwithstaticid = @Orchard.QueryListItemsAsync("4yd51twjrqcqsxv0vez4zdz04w");
 
     foreach (var item in Model.Items)
     {

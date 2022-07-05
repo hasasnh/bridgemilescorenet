@@ -1,6 +1,6 @@
 using System;
-using Bridgemiles.Core.Net.Menu.Drivers;
-using Bridgemiles.Core.Net.Menu.Models;
+using Bridgemiles.Core.Net.LandingHero.Drivers;
+using Bridgemiles.Core.Net.LandingHero.Models;
 using Fluid;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
@@ -9,34 +9,22 @@ using OrchardCore.ContentManagement;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Modules;
 
-namespace Bridgemiles.Core.Net.Menu
+namespace Bridgemiles.Core.Net.LandingHero
 {
     public class Startup : StartupBase
     {
         public override void ConfigureServices(IServiceCollection services)
         {
             services
-               .AddContentPart<Employee>()
-              .UseDisplayDriver<EmployeeDisplayDriver>();
-
-            services
-                .AddContentPart<ClientCustom>()
-                .UseDisplayDriver<ClientCustomDisplayDriver>();
-
-            //services
-            //  .AddContentPart<EmployePagePart>()
-            //  .UseDisplayDriver<EmployePagePartDisplayDriver>();
-
-            services
-              .AddContentPart<EmployeWidgetListPart>()
-              .UseDisplayDriver<EmployeWidgetListPartDisplayDriver>();
+             .AddContentPart<HeroHeading>()
+            .UseDisplayDriver<HeroHeadingDisplayDriver>();
         }
 
         public override void Configure(IApplicationBuilder builder, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
             routes.MapAreaControllerRoute(
                 name: "Home",
-                areaName: "Bridgemiles.Core.Net.Menu",
+                areaName: "Bridgemiles.Core.Net.LandingHero",
                 pattern: "Home/Index",
                 defaults: new { controller = "Home", action = "Index" }
             );
