@@ -16,20 +16,8 @@ namespace Bridgemiles.Core.Net.Menu
         public override void ConfigureServices(IServiceCollection services)
         {
             services
-               .AddContentPart<Employee>()
-              .UseDisplayDriver<EmployeeDisplayDriver>();
-
-            services
-                .AddContentPart<ClientCustom>()
-                .UseDisplayDriver<ClientCustomDisplayDriver>();
-
-            //services
-            //  .AddContentPart<EmployePagePart>()
-            //  .UseDisplayDriver<EmployePagePartDisplayDriver>();
-
-            services
-              .AddContentPart<EmployeWidgetListPart>()
-              .UseDisplayDriver<EmployeWidgetListPartDisplayDriver>();
+                    .AddContentPart<CustomMenu>()
+                    .UseDisplayDriver<CustomLinkMenuItemPartDisplayDriver>();
         }
 
         public override void Configure(IApplicationBuilder builder, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)

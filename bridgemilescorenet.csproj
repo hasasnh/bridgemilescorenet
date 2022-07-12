@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
     <Folder Include="Localization\" />
   </ItemGroup>
 
   <!-- Watcher include and excludes -->
   <ItemGroup>
-      <Watch Include="**\*.cs" Exclude="Recipes\**;Assets\**;node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+      <Watch Include="**\*.cs" Exclude="Recipes\**;node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="src\**" />
@@ -35,7 +34,9 @@
   <ItemGroup>
     <ProjectReference Include="src\Modules\Lombiq.HelpfulExtensions\Lombiq.HelpfulExtensions.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.LandingHero\Bridgemiles.Core.Net.LandingHero.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Logo\Bridgemiles.Core.Net.Logo.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Menu\Bridgemiles.Core.Net.Menu.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Toolbar\Bridgemiles.Core.Net.Toolbar.csproj" />
     <ProjectReference Include="src\OrchardCore.Themes\Metronic\Metronic.csproj" />
   </ItemGroup>
 

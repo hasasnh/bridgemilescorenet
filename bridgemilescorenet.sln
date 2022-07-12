@@ -41,6 +41,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lombiq.HelpfulLibraries.Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.LandingHero", "src\OrchardCore.Modules\Bridgemiles.Core.Net.LandingHero\Bridgemiles.Core.Net.LandingHero.csproj", "{D859BD6A-3D6A-451A-800C-461498B3D866}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starterkit", "src\asp.net-core_demo1\Starterkit\Starterkit.csproj", "{559B74B6-4899-47FD-B91F-BBD8424126EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.Toolbar", "src\OrchardCore.Modules\Bridgemiles.Core.Net.Toolbar\Bridgemiles.Core.Net.Toolbar.csproj", "{91477DAC-A964-4125-B0D8-441F93EB9B28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.Logo", "src\OrchardCore.Modules\Bridgemiles.Core.Net.Logo\Bridgemiles.Core.Net.Logo.csproj", "{4AFF8327-3FCB-414C-8B78-22A8C1C10489}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +113,18 @@ Global
 		{D859BD6A-3D6A-451A-800C-461498B3D866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D859BD6A-3D6A-451A-800C-461498B3D866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D859BD6A-3D6A-451A-800C-461498B3D866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{559B74B6-4899-47FD-B91F-BBD8424126EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559B74B6-4899-47FD-B91F-BBD8424126EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559B74B6-4899-47FD-B91F-BBD8424126EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559B74B6-4899-47FD-B91F-BBD8424126EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91477DAC-A964-4125-B0D8-441F93EB9B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91477DAC-A964-4125-B0D8-441F93EB9B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91477DAC-A964-4125-B0D8-441F93EB9B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91477DAC-A964-4125-B0D8-441F93EB9B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AFF8327-3FCB-414C-8B78-22A8C1C10489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AFF8327-3FCB-414C-8B78-22A8C1C10489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AFF8327-3FCB-414C-8B78-22A8C1C10489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AFF8327-3FCB-414C-8B78-22A8C1C10489}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +144,8 @@ Global
 		{E06A7631-6A42-45EF-A5D2-9128908B3252} = {84F75BFB-7ED0-49DD-8167-471A63BFFE76}
 		{D8FA17C4-E605-4029-85D9-705B499460B3} = {84F75BFB-7ED0-49DD-8167-471A63BFFE76}
 		{D859BD6A-3D6A-451A-800C-461498B3D866} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
+		{91477DAC-A964-4125-B0D8-441F93EB9B28} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
+		{4AFF8327-3FCB-414C-8B78-22A8C1C10489} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {795952F4-2004-4606-BFFC-858D76FAE879}
