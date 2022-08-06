@@ -18270,7 +18270,7 @@ textarea.form-control-lg {
     max-height: 35px !important;
   }
   .mh-lg-40px {
-    max-height: 40px !important;
+    max-height: 50px !important; /*my custom change*/
   }
   .mh-lg-45px {
     max-height: 45px !important;

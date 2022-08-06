@@ -18,4 +18,10 @@
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.3.0-preview-16386" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Views\LandingHero-BagPart.cshtml">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Localization\" />
+    <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
   <!-- Watcher include and excludes -->
@@ -33,9 +34,15 @@
 
   <ItemGroup>
     <ProjectReference Include="src\Modules\Lombiq.HelpfulExtensions\Lombiq.HelpfulExtensions.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.HowItWorks\Bridgemiles.Core.Net.HowItWorks.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.LandingHero\Bridgemiles.Core.Net.LandingHero.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Logo\Bridgemiles.Core.Net.Logo.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Menu\Bridgemiles.Core.Net.Menu.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.ProjectSection\Bridgemiles.Core.Net.ProjectSection.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Session\Bridgemiles.Core.Net.Session.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Statistics\Bridgemiles.Core.Net.Statistics.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Story\Bridgemiles.Core.Net.Story.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.TeamSection\Bridgemiles.Core.Net.TeamSection.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Toolbar\Bridgemiles.Core.Net.Toolbar.csproj" />
     <ProjectReference Include="src\OrchardCore.Themes\Metronic\Metronic.csproj" />
   </ItemGroup>

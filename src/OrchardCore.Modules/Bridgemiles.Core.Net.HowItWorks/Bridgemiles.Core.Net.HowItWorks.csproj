@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.ContentFields" Version="1.3.0" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.3.0-preview-16386" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.3.0-preview-16386" />
+    <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.3.0-preview-16386" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.3.0-preview-16386" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bridgemiles.Core.Net.Story\Bridgemiles.Core.Net.Story.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Home\Index.cshtml">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,89 +1,101 @@
 <!DOCTYPE html>
-<html lang="@Orchard.CultureName()">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
-    <link type="image/x-icon" rel="shortcut icon" href="~/TheTheme/favicon.ico">
-    <script asp-name="bootstrap" version="5" at="Foot"></script>
-    <style asp-name="thetheme-bootstrap-oc" version="1"></style>
-    <style asp-name="font-awesome" version="6"></style>
-    <resources type="Meta" />
-    <resources type="HeadLink" />
-    <resources type="Stylesheet" />
-    <resources type="HeadScript" />
-    @await RenderSectionAsync("HeadMeta", required: false)
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-    <meta property="og:url" content="https://keenthemes.com/metronic" />
-    <meta property="og:site_name" content="Keenthemes | Metronic" />
-    <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="/Metronic/assets/media/logos/favicon.ico" />
-    <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-    <!--end::Fonts-->
-    <!--begin::Global Stylesheets Bundle(used by all pages)-->
-    <link href="/Metronic/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/Metronic/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Global Stylesheets Bundle-->
+    <html lang="@Orchard.CultureName()">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+        <link type="image/x-icon" rel="shortcut icon" href="~/TheTheme/favicon.ico">
+        <script asp-name="bootstrap" version="5" at="Foot"></script>
+        <style asp-name="thetheme-bootstrap-oc" version="1"></style>
+        <style asp-name="font-awesome" version="6"></style>
+        <resources type="Meta" />
+        <resources type="HeadLink" />
+        <resources type="Stylesheet" />
+        <resources type="HeadScript" />
+        @await RenderSectionAsync("HeadMeta", required: false)
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+        <meta property="og:url" content="https://keenthemes.com/metronic" />
+        <meta property="og:site_name" content="Keenthemes | Metronic" />
+        <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+        <link rel="shortcut icon" href="/Metronic/assets/media/logos/favicon.ico" />
+        <!--begin::Fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+        <!--end::Fonts-->
+        <!--begin::Global Stylesheets Bundle(used by all pages)-->
+        <link href="/Metronic/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/Metronic/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <!--end::Global Stylesheets Bundle-->
 
-</head>
+    </head>
 
-<!--begin::Body-->
-<body dir="@Orchard.CultureDir()" id="kt_body" data-bs-spy="scroll" data-bs-target="#kt_landing_menu" data-bs-offset="200" class="bg-white position-relative">
-    <!--begin::Main-->
-    <!--begin::Root-->
-    <div class="d-flex flex-column flex-root">
-        <!--begin::Header Section-->
-        <div class="mb-0" id="home">
-            <!--begin::Wrapper-->
-            <div class="bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg" style="background-image: url(Metronic/assets/media/svg/illustrations/landing.svg)">
-                <!--begin::Header-->
-                <div class="landing-header" data-kt-sticky="true" data-kt-sticky-name="landing-header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
-                    <!--begin::Container-->
-                    <div class="container">
-                        <!--begin::Wrapper-->
-                        <div class="d-flex align-items-center justify-content-between">
-                            @await RenderSectionAsync("Logo", required: false)
-                            @await RenderSectionAsync("Menu", required: false)
-                            @await RenderSectionAsync("Toolbar", required: false)
+    <!--begin::Body-->
+    <body dir="@Orchard.CultureDir()" id="kt_body" data-bs-spy="scroll" data-bs-target="#kt_landing_menu" data-bs-offset="200" class="bg-white position-relative">
+        <!--begin::Main-->
+        <!--begin::Root-->
+        <div class="d-flex flex-column flex-root">
+            <!--begin::Header Section-->
+            <div class="mb-0" id="home">
+                <!--begin::Wrapper-->
+                <div class="bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg" style="background-image: url(Metronic/assets/media/svg/illustrations/landing.svg)">
+                    <!--begin::Header-->
+                    <div class="landing-header" data-kt-sticky="true" data-kt-sticky-name="landing-header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+                        <!--begin::Container-->
+                        <div class="container">
+                            <!--begin::Wrapper-->
+                            <div class="d-flex align-items-center justify-content-between">
+                                 @await RenderSectionAsync("Header", required: false)
+                            </div>
+                            <!--end::Wrapper-->
                         </div>
-                        <!--end::Wrapper-->
+                        <!--end::Container-->
                     </div>
-                    <!--end::Container-->
+                    <!--end::Header-->
+                     @await RenderSectionAsync("LandingHero", required: false)
                 </div>
-                <!--end::Header-->
-                <!--begin::Landing hero-->
-                <div class="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9">
-                    @await RenderBodyAsync()
-                </div>
-                <!--end::Landing hero-->
+                 @*@await RenderSectionAsync("LandingCurve", required: false)*@
+                 				<!--begin::Curve bottom-->
+				<div class="landing-curve landing-dark-color mb-10 mb-lg-20">
+					<svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="currentColor"></path>
+					</svg>
+				</div>
+				<!--end::Curve bottom-->
+                
             </div>
-            <!--end::Wrapper-->
-            <!--begin::Curve bottom-->
-            <div class="landing-curve landing-dark-color mb-10 mb-lg-20">
-                <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="currentColor"></path>
-                </svg>
-            </div>
-            <!--end::Curve bottom-->
+            <!--end::Header Section-->
+
+                @await RenderBodyAsync()
 
         </div>
-        <!--end::Header Section-->
-    </div>
-    <!--end::Root-->
-    <!--end::Main-->
-    @if (IsSectionDefined("Footer"))
-    {
-        <footer>
-            <div class="container">
-                @await RenderSectionAsync("Footer", required: false)
-            </div>
-        </footer>
-    }
-    <resources type="FootScript" />
-</body>
+        <!--end::Root-->
+        <!--end::Main-->
+        @if (IsSectionDefined("Footer"))
+        {
+            <footer>
+                <div class="container">
+                    @await RenderSectionAsync("Footer", required: false)
+                </div>
+            </footer>
+        }
+        <resources type="FootScript" />
+        <!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="/Metronic/assets/plugins/global/plugins.bundle.js"></script>
+		<script src="/Metronic/assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="/Metronic/assets/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
+		<script src="/Metronic/assets/plugins/custom/typedjs/typedjs.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="/Metronic/assets/js/custom/landing.js"></script>
+		<script src="/Metronic/assets/js/custom/pages/pricing/general.js"></script>
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
+    </body>
 
-</html>
+    </html>
