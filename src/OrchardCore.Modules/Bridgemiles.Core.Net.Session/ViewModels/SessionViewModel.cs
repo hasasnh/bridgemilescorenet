@@ -16,5 +16,7 @@ namespace Bridgemiles.Core.Net.Session.ViewModels
         public string Title { get; set; }
         public string Description { get; set; }
 
+        public string ModifiedUtc{ get; set; }
+        public List<RelatedSession> RelatedSession { get; set; }
     }
 }

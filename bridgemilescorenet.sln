@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.Session", "src\OrchardCore.Modules\Bridgemiles.Core.Net.Session\Bridgemiles.Core.Net.Session.csproj", "{4AE801C9-8BB0-4B7C-BEEF-A021868DBC91}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridgemiles.Core.Net.SessionList", "src\OrchardCore.Modules\Bridgemiles.Core.Net.SessionList\Bridgemiles.Core.Net.SessionList.csproj", "{CE516702-1123-4A88-8BF4-9B0098853330}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,10 @@ Global
 		{4AE801C9-8BB0-4B7C-BEEF-A021868DBC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AE801C9-8BB0-4B7C-BEEF-A021868DBC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AE801C9-8BB0-4B7C-BEEF-A021868DBC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE516702-1123-4A88-8BF4-9B0098853330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE516702-1123-4A88-8BF4-9B0098853330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE516702-1123-4A88-8BF4-9B0098853330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE516702-1123-4A88-8BF4-9B0098853330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +194,7 @@ Global
 		{43C01ACD-1856-44A6-A76C-78828D5D67ED} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
 		{6AEBF3B7-F313-49F5-A070-11AE2AACD63A} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
 		{4AE801C9-8BB0-4B7C-BEEF-A021868DBC91} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
+		{CE516702-1123-4A88-8BF4-9B0098853330} = {2CD77B6B-0D2B-4277-80FC-CB1177AB1EA5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {795952F4-2004-4606-BFFC-858D76FAE879}

@@ -1,84 +1,145 @@
 ﻿@model Bridgemiles.Core.Net.Session.ViewModels.SessionViewModel
 
 @{
-  						<!--begin::Post-->
-						<div class="post d-flex flex-column-fluid" id="kt_post">
-							<!--begin::Container-->
-							<div id="kt_content_container" class="container-xxl">
-								<!--begin::Home card-->
-								<div class="card">
-									<!--begin::Body-->
-									<div class="card-body p-lg-20">
-										<!--begin::Section-->
-										<div class="mb-17">
-											<!--begin::Title-->
-											<h3 class="text-dark mb-7">Latest Articles, News &amp; Updates</h3>
-											<!--end::Title-->
-											<!--begin::Separator-->
-											<div class="separator separator-dashed mb-9"></div>
-											<!--end::Separator-->
-											<!--begin::Row-->
-											<div class="row">
-												<!--begin::Col-->
-												<div class="col-md-6">
-													<!--begin::Feature post-->
-													<div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
-														<!--begin::Video-->
-														<div class="mb-3">
-															<iframe class="embed-responsive-item card-rounded h-275px w-100" src="@Model.URL" allowfullscreen="allowfullscreen"></iframe>
-														</div>
-														<!--end::Video-->
-														<!--begin::Body-->
-														<div class="mb-5">
-															<!--begin::Title-->
-															<a href="#" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">@Model.Title</a>
-															<!--end::Title-->
-															<!--begin::Text-->
-															<div class="fw-bold fs-5 text-gray-600 text-dark mt-4">@Model.Description</div>
-															<!--end::Text-->
-															<br></br>
-															<a href="@Model.PowerPoint" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">Download Slides</a>
-															<br></br>
-															<a href="@Model.SourceCode" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">Download Source Code</a>
-															<br></br>
-														</div>
-														<!--end::Body-->
-														<!--begin::Footer-->
-														<div class="d-flex flex-stack flex-wrap">
-															<!--begin::Item-->
-															<div class="d-flex align-items-center pe-2">
-																<!--begin::Avatar-->
-																<div class="symbol symbol-35px symbol-circle me-3">
-																	<img alt="" src="/media/avatars/6.png" />
-																</div>
-																<!--end::Avatar-->
-																<!--begin::Text-->
-																<div class="fs-5 fw-bolder">
-																	<a href="../../demo1/dist/pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Mohannad Alhasasneh</a>
-																	<span class="text-muted">on Apr 27 2021</span>
-																</div>
-																<!--end::Text-->
-															</div>
-															<!--end::Item-->
-															<!--begin::Label-->
-															<span class="badge badge-light-primary fw-bolder my-2">TUTORIALS</span>
-															<!--end::Label-->
-														</div>
-														<!--end::Footer-->
-													</div>
-													<!--end::Feature post-->
-												</div>
-												<!--end::Col-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            <!--begin::Home card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-20">
+                    <!--begin::Section-->
+                    <div class="mb-17">
+                        <!--begin::Title-->
+                        <h3 class="text-dark mb-7">Latest Articles, News &amp; Updates</h3>
+                        <!--end::Title-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed mb-9"></div>
+                        <!--end::Separator-->
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-md-6">
+                                <!--begin::Feature post-->
+                                <div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
+                                    <!--begin::Video-->
+                                    <div class="mb-3">
+                                        <iframe class="embed-responsive-item card-rounded h-275px w-100" src="@Model.URL" allowfullscreen="allowfullscreen"></iframe>
+                                    </div>
+                                    <!--end::Video-->
+                                    <!--begin::Body-->
+                                    <div class="mb-5">
+                                        <!--begin::Title-->
+                                        <a href="#" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">@Model.Title</a>
+                                        <!--end::Title-->
+                                        <!--begin::Text-->
+                                        <div class="fw-bold fs-5 text-gray-600 text-dark mt-4">@Model.Description</div>
+                                        <!--end::Text-->
+                                        <br></br>
+                                        <a href="@Model.PowerPoint" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">Download Slides</a>
+                                        <br></br>
+                                        <a href="@Model.SourceCode" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">Download Source Code</a>
+                                        <br></br>
+                                    </div>
+                                    <!--end::Body-->
+                                    <!--begin::Footer-->
+                                    <div class="d-flex flex-stack flex-wrap">
+                                        <!--begin::Item-->
+                                        <div class="d-flex align-items-center pe-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle me-3">
+                                                <img alt="" src="/media/avatars/6.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Text-->
+                                            <div class="fs-5 fw-bolder">
+                                                <a href="../../demo1/dist/pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Mohannad Alhasasneh</a>
+                                                <span class="text-muted">on @Model.ModifiedUtc</span>
+                                            </div>
+                                            <!--end::Text-->
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Label-->
+                                        <span class="badge badge-light-primary fw-bolder my-2">TUTORIALS</span>
+                                        <!--end::Label-->
+                                    </div>
+                                    <!--end::Footer-->
+                                </div>
+                                <!--end::Feature post-->
+                            </div>
+                            <!--end::Col-->
 
-											</div>
-											<!--begin::Row-->
-										</div>
-									</div>
-									<!--end::Body-->
-								</div>
-								<!--end::Home card-->
-							</div>
-							<!--end::Container-->
-						</div>
-						<!--end::Post-->
+                        </div>
+                        <!--begin::Row-->
+                    </div>
+
+                    <div class="mb-17">
+                        <!--begin::Content-->
+                        <div class="d-flex flex-stack mb-5">
+                            <!--begin::Title-->
+                            <h3 class="text-dark">Related Videos</h3>
+                            <!--end::Title-->
+                            <!--begin::Link-->
+                            <a href="#" class="fs-6 fw-bold link-primary">View All Videos</a>
+                            <!--end::Link-->
+                        </div>
+                        <!--end::Content-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed mb-9"></div>
+                        <!--end::Separator-->
+                        <!--begin::Row-->
+                        <div class="row g-10">
+                            @{
+                                foreach (var session in @Model.RelatedSession.Select((item, index) => new { item, index }))
+                                {
+                                                                <!--begin::Col-->
+                            <div class="col-md-4">
+                                <!--begin::Feature post-->
+                                <div class="card-xl-stretch me-md-6">
+                                    <!--begin::Image-->
+                                    <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5" style="background-image:url('/media/@session.item.Img')" data-fslightbox="lightbox-video-tutorials" href="@session.item.URL">
+                                        <img src="assets/media/svg/misc/video-play.svg" class="position-absolute top-50 start-50 translate-middle" alt="">
+                                    </a>
+                                    <!--end::Image-->
+                                    <!--begin::Body-->
+                                    <div class="m-0">
+                                        <!--begin::Title-->
+                                        <a href="@session.item.Link" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">@session.item.Title</a>
+                                        <!--end::Title-->
+                                        <!--begin::Text-->
+                                        <div class="fw-bold fs-5 text-gray-600 text-dark my-4"></div>
+                                        <!--end::Text-->
+                                        <!--begin::Content-->
+                                        <div class="fs-6 fw-bolder">
+                                            <!--begin::Author-->
+                                            <a href="@session.item.Link" class="text-gray-700 text-hover-primary">Mohannad Alhasasneh</a>
+                                            <!--end::Author-->
+                                            <!--begin::Date-->
+                                            <span class="text-muted">on @Model.ModifiedUtc</span>
+                                            <!--end::Date-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Body-->
+                                </div>
+                                <!--end::Feature post-->
+                            </div>
+                            <!--end::Col-->
+                                }
+                            }
+
+                        </div>
+                        <!--end::Row-->
+                    </div>
+
+
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Home card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
 }
