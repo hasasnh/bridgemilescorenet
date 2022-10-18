@@ -1,0 +1,81 @@
+﻿@model Bridgemiles.Core.Net.SessionList.ViewModels.SessionList
+
+@{
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            <!--begin::Home card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-20">
+
+                    <!--begin::Section-->
+                    <div class="mb-17">
+                        <!--begin::Content-->
+                        <div class="d-flex flex-stack mb-5">
+                            <!--begin::Title-->
+                            <h3 class="text-dark">Video Tutorials</h3>
+                            <!--end::Title-->
+                            <!--begin::Link-->
+                            <a href="#" class="fs-6 fw-bold link-primary">View All Videos</a>
+                            <!--end::Link-->
+                        </div>
+                        <!--end::Content-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed mb-9"></div>
+                        <!--end::Separator-->
+                        <!--begin::Row-->
+                        <div class="row g-10">
+
+                            @{
+                                foreach (var session in @Model.RelatedSession.Select((item, index) => new { item, index }))
+                                {
+
+                                    <!--begin::Col-->
+                                    <div class="col-md-4">
+                                        <!--begin::Feature post-->
+                                        <div class="card-xl-stretch me-md-6">
+                                            <div class="mb-3">
+                                                <iframe class="embed-responsive-item card-rounded h-275px w-100" src="@session.item.URL" allowfullscreen="allowfullscreen"></iframe>
+                                            </div>
+                                            <!--begin::Body-->
+                                            <div class="m-0">
+                                                <!--begin::Title-->
+                                                <a href="@session.item.PageURL" class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">@session.item.Title</a>
+                                                <!--end::Title-->
+                                                <!--begin::Text-->
+                                                <div class="fw-bold fs-5 text-gray-600 text-dark my-4">@session.item.Description</div>
+                                                <!--end::Text-->
+                                                <!--begin::Content-->
+                                                <div class="fs-6 fw-bolder">
+                                                    <!--begin::Author-->
+                                                    <a href="@session.item.PageURL" class="text-gray-700 text-hover-primary">Mohannad Alhasasneh</a>
+                                                    <!--end::Author-->
+                                                    <!--begin::Date-->
+                                                    <span class="text-muted">on @session.item.ModifiedUtc</span>
+                                                    <!--end::Date-->
+                                                </div>
+                                                <!--end::Content-->
+                                            </div>
+                                            <!--end::Body-->
+                                        </div>
+                                        <!--end::Feature post-->
+                                    </div>
+                                    <!--end::Col-->
+                                }
+                            }
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Section-->
+
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Home card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+}

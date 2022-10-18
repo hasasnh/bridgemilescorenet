@@ -6,48 +6,69 @@ using OrchardCore.DisplayManagement.Views;
 using System.Threading.Tasks;
 using Bridgemiles.Core.Net.SessionList.Models;
 using Bridgemiles.Core.Net.SessionList.ViewModels;
+using YesSql;
+using OrchardCore.ContentManagement;
+using OrchardCore.ContentManagement.Records;
+using System.Collections.Generic;
+using System;
 
 namespace Bridgemiles.Core.Net.SessionList.Drivers
 {
-    public class SessionListDisplayDriver : ContentPartDisplayDriver<Models.SessionPart>
+    public class SessionListDisplayDriver : ContentPartDisplayDriver<Models.SessionList>
     {
         private readonly IOrchardHelper _orchardHelper;
+        private readonly ISession _session;
+        private readonly IContentManager _contentManager;
 
-        public SessionListDisplayDriver(IOrchardHelper orchardHelper)
+        public SessionListDisplayDriver(IOrchardHelper orchardHelper, ISession session, IContentManager contentManager)
         {
             _orchardHelper = orchardHelper;
+            _session = session;
+            _contentManager = contentManager;
+
         }
 
-        public override IDisplayResult Display(Models.SessionPart part, BuildPartDisplayContext context)
+        public override IDisplayResult Display(Models.SessionList part, BuildPartDisplayContext context)
         {
-            return Initialize<SessionListViewModel>(GetDisplayShapeType(context), viewModel => PopulateViewModel(part, viewModel)).Location("Detail", "Content:5").Location("Summary", "Content:5");
+
+            return Initialize<Bridgemiles.Core.Net.SessionList.ViewModels.SessionList>(GetDisplayShapeType(context), viewModel => PopulateViewModel(part, viewModel)).Location("Detail", "Content:5").Location("Summary", "Content:5");
         }
 
-        private static void PopulateViewModel(Models.SessionPart part, SessionListViewModel viewModel)
+        private async Task<List<SessionListViewModel>> List()
         {
+            List<SessionListViewModel> sessionListViewModelList = new List<SessionListViewModel>();
 
-            var relatedSessionList = part.ContentItem.Content.RelatedSessionBag?.ContentItems;
-            //viewModel.RelatedSession = new System.Collections.Generic.List<Models.RelatedSession>();
+            var sessionList = await _session
+                                     .Query<ContentItem, ContentItemIndex>(x => x.ContentType == "SeesionItem" && x.Latest == true)
+                                     .ListAsync();
+            foreach (var session in sessionList)
+            {
+                try
+                {
+                    var loadedSession = await _contentManager.LoadAsync(session);
+                    SessionListViewModel sessionListViewModel = new SessionListViewModel();
+                    sessionListViewModel.Title = session.ContentItem.Content.NewSessionPart.Title.Text;
+                    sessionListViewModel.URL = session.ContentItem.Content.NewSessionPart.VideoLink.Url;
+                    sessionListViewModel.PageURL = session.ContentItem.Content.NewSessionPart.VideoLink.Text;
+                    sessionListViewModel.Description = session.ContentItem.Content.NewSessionPart.Description.Text;
+                    sessionListViewModel.PowerPoint = session.ContentItem.Content.NewSessionPart.PowerPoint.Url;
+                    sessionListViewModel.SourceCode = session.ContentItem.Content.NewSessionPart.SourceCode.Url;
+                    sessionListViewModel.ModifiedUtc = session.ContentItem.ContentItem.ModifiedUtc?.ToString();
+                    sessionListViewModelList.Add(sessionListViewModel);
+                }
+                catch (Exception ex)
+                {
 
-            //if (relatedSessionList != null)
-            //{
-            //    foreach (var bag in relatedSessionList)
-            //    {
-            //        RelatedSession session = new Models.RelatedSession();
-            //        session.Img = (string)bag.ReleatedSession.Img.Paths[0];
-            //        session.Title = (string)bag.ReleatedSession.Title.Text;
-            //        session.Link = (string)bag.ReleatedSession.YoutubeURL.Text;
-            //        session.URL = (string)bag.ReleatedSession.YoutubeURL.Url;
-            //        viewModel.RelatedSession.Add(session);
-            //    }
-            //}
+                }
 
-            viewModel.URL = part.Link.Url;
-            viewModel.PowerPoint = part.PowerPoint.Url;
-            viewModel.SourceCode = part.SourceCode.Url;
-            viewModel.Title = part.Title.Text;
-            viewModel.Description = part.Description.Text;
-            viewModel.ModifiedUtc = part.ContentItem.ModifiedUtc?.ToString();
+            }
+
+            return sessionListViewModelList;
+        }
+        private void PopulateViewModel(Models.SessionList part, Bridgemiles.Core.Net.SessionList.ViewModels.SessionList viewModelList)
+        {
+            viewModelList.RelatedSession = new List<SessionListViewModel>();
+            viewModelList.RelatedSession = List().Result; 
 
         }
     }

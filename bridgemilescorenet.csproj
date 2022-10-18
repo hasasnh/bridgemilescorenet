@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -39,6 +39,7 @@
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Logo\Bridgemiles.Core.Net.Logo.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Menu\Bridgemiles.Core.Net.Menu.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.ProjectSection\Bridgemiles.Core.Net.ProjectSection.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.SessionList\Bridgemiles.Core.Net.SessionList.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Session\Bridgemiles.Core.Net.Session.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Statistics\Bridgemiles.Core.Net.Statistics.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Story\Bridgemiles.Core.Net.Story.csproj" />

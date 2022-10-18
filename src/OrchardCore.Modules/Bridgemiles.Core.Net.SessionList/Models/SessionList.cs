@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bridgemiles.Core.Net.SessionList.Models
 {
-    public class SessionPart : ContentPart
+    public class SessionList : ContentPart
     {
         public LinkField Link { get; set; }
         public LinkField PowerPoint { get; set; }
