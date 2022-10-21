@@ -1,0 +1,77 @@
+﻿@model Bridgemiles.Core.Net.Session.ViewModels.SimpleVideoViewModel
+
+@{
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            <!--begin::Home card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-20">
+                    <!--begin::Section-->
+                    <div class="mb-17">
+                        <!--begin::Title-->
+                        <h3 class="text-dark mb-7">Training X - Introduction</h3>
+                        <!--end::Title-->
+                        <!--begin::Separator-->
+                        <div class="separator separator-dashed mb-9"></div>
+                        <!--end::Separator-->
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-md-custom-6">
+                                <!--begin::Feature post-->
+                                <div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
+                                    <!--begin::Video-->
+                                    <div class="mb-3">
+                                        <iframe class="embed-responsive-item card-rounded h-500px w-100" src="@Model.URL" allowfullscreen="allowfullscreen"></iframe>
+                                    </div>
+                                    <!--end::Video-->
+                                    <!--begin::Body-->
+                                    <div class="mb-5">
+                                        <!--begin::Title-->
+                                        <a href="#" class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base">@Model.Title</a>
+                                        <!--end::Title-->
+                                        <!--begin::Text-->
+                                        <div class="fw-bold fs-5 text-gray-600 text-dark mt-4">@Model.Description</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Body-->
+                                    <!--begin::Footer-->
+                                    <div class="d-flex flex-stack flex-wrap">
+                                        <!--begin::Item-->
+                                        <div class="d-flex align-items-center pe-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle me-3">
+                                                <img alt="" src="/media/avatars/6.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Text-->
+                                            <div class="fs-5 fw-bolder">
+                                                <a href="../../demo1/dist/pages/user-profile/overview.html" class="text-gray-700 text-hover-primary">Mohannad Alhasasneh</a>
+                                                <span class="text-muted">on @Model.ModifiedUtc</span>
+                                            </div>
+                                            <!--end::Text-->
+                                        </div>
+                                        <!--end::Item-->
+                                        <!--begin::Label-->
+                                    </div>
+                                    <!--end::Footer-->
+                                </div>
+                                <!--end::Feature post-->
+                            </div>
+                            <!--end::Col-->
+
+                        </div>
+                        <!--begin::Row-->
+                    </div>
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Home card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+}

@@ -41,6 +41,7 @@
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.ProjectSection\Bridgemiles.Core.Net.ProjectSection.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.SessionList\Bridgemiles.Core.Net.SessionList.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Session\Bridgemiles.Core.Net.Session.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.SimpleVideo\Bridgemiles.Core.Net.SimpleVideo.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Statistics\Bridgemiles.Core.Net.Statistics.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Story\Bridgemiles.Core.Net.Story.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.TeamSection\Bridgemiles.Core.Net.TeamSection.csproj" />
