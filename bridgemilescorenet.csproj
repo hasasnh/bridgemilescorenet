@@ -34,6 +34,7 @@
 
   <ItemGroup>
     <ProjectReference Include="src\Modules\Lombiq.HelpfulExtensions\Lombiq.HelpfulExtensions.csproj" />
+    <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.AboutUs\Bridgemiles.Core.Net.AboutUs.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.HowItWorks\Bridgemiles.Core.Net.HowItWorks.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.LandingHero\Bridgemiles.Core.Net.LandingHero.csproj" />
     <ProjectReference Include="src\OrchardCore.Modules\Bridgemiles.Core.Net.Logo\Bridgemiles.Core.Net.Logo.csproj" />
